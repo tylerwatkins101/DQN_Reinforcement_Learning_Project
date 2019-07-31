@@ -30,8 +30,8 @@ The project was done using python 3 and has the following library dependencies t
 - Navigation.ipynb - jupyter notebook used to open environment, instantiate and train agent, and save trained model parameters.
 - model.py - python module containing Q-Network architecture class.
 - dqn_agent.py - python module containing DQN Agent, and Replay Buffer classes.
-- checkpoint.pth - saved trained model parameters
-- REPORT.md
+- checkpoint.pth - saved trained model parameters.
+- Report.md - explains the model parameters, training, and potential future improvements.
 
 ## Instructions
 
