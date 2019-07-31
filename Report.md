@@ -9,7 +9,7 @@ The learning algorithm used to train the agent was a Deep Q-Network model traine
 - Hidden Linear Layer 2 (64 nodes)
 - Outputs = Action Space Size (4)
 
-#### The hyperparameters
+#### The Hyperparameters:
 
 - minibatch size: 64
 - replay memory size: 100000
