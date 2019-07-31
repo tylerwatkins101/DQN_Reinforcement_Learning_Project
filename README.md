@@ -36,4 +36,5 @@ The project was done using python 3 and has the following library dependencies t
 ## Instructions
 
 To run the code and train the model yourself you'll need to download the Unity environment as well Navigation.ipynb, model.py, and dqn_agent.py from this repository.
+
 Open the Navigation.ipynb jupyter notebook in your browser and run the code cells from top to bottom. In the notebook you'll see a visualization of the agent learning the task and after the agent has scored an average of at least +13 over 100 consecutive episodes the agent's model parameters will be saved to a .pth file.
