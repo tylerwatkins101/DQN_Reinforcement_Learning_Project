@@ -2,8 +2,27 @@
 
 The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
 
+The learning algorithm used to train the agent was a Deep Q-Network model trained with a temporal-difference algorithm using experience replay and fixed q-targets.
 
+#### The Model Architecture for the Q-Network:
 
+- Inputs = State Space Size (37)
+- Hidden Linear Layer 1 (64 nodes)
+- Hidden Linear Layer 2 (64 nodes)
+- Outputs = Action Space Size (4)
+
+#### The hyperparameters
+
+- minibatch size: 64
+- replay memory size: 100000
+- update frequency: 4
+- discount factor (gamma): 0.99
+- tau: 0.001
+- optimizer: Adam
+- learning rate: 0.0005
+- eps_start: 1.0
+- eps_decay: 0.995
+- eps_end: 0.01
 
 ## Plot of Rewards
 
