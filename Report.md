@@ -1,7 +1,5 @@
 ## Learning Algorithm
 
-The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
-
 The learning algorithm used to train the agent was a Deep Q-Network model trained with a temporal-difference algorithm using experience replay and fixed q-targets.
 
 #### The Model Architecture for the Q-Network:
