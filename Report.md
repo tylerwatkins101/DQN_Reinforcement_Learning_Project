@@ -2,14 +2,16 @@
 
 The learning algorithm used to train the agent was a Deep Q-Network model trained with a temporal-difference algorithm using experience replay and fixed q-targets.
 
-#### The Model Architecture for the Q-Network:
+Fixed Q-Targets: Two networks are used, with the “target” network merely being a copy of the training network. The training network will have its Q-values updated, but will use the Q-value of the target network when estimating future discounted return (i.e., it will use the “old” network to generate estimates). The target network will periodically be updated to match the training network, so that these estimates won’t be far away from the training network. Decoupling the target from the parameters makes the learning algorithm much more stable and less likely to diverge or fall into oscillations.
+
+## The Model Architecture for the Q-Network:
 
 - Inputs = State Space Size (37)
 - Hidden Linear Layer 1 (64 nodes)
 - Hidden Linear Layer 2 (64 nodes)
 - Outputs = Action Space Size (4)
 
-#### The Hyperparameters:
+## The Hyperparameters:
 
 - minibatch size: 64
 - replay memory size: 100000
@@ -26,7 +28,6 @@ The learning algorithm used to train the agent was a Deep Q-Network model traine
 
 Here we see a plot of rewards per training episode to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The environment was solved in 583 episodes.
 
-
 ![reward_plot](photos/reward_plot.png)
 
 ## Ideas for Future Work
@@ -38,3 +39,7 @@ There are many ways that this agent could be improved in the future. I will list
 3. Use a Double DQN. 
 4. Use Dueling DQN. 
 5. Use Prioritized experience replay.
+
+## References
+
+- [Human-level control through deep reinforcement learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
