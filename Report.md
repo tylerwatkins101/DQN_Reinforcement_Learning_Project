@@ -34,16 +34,16 @@ The pseudo-code for the DQN algorithm is as follows:
 
 ## The Hyperparameters
 
-- minibatch size: 64
-- replay memory size: 100000
-- update frequency: 4
-- discount factor (gamma): 0.99
-- tau: 0.001
-- optimizer: Adam
-- learning rate: 0.0005
-- eps_start: 1.0
-- eps_decay: 0.995
-- eps_end: 0.01
+- BUFFER_SIZE = int(1e5)  # replay buffer size
+- BATCH_SIZE = 64         # minibatch size
+- GAMMA = 0.99            # discount factor
+- TAU = 1e-3              # for soft update of target parameters
+- LR = 5e-4               # learning rate
+- UPDATE_EVERY = 4        # how often to update the network
+- OPTIMIZER: Adam
+- EPS_START: 1.0          # epsilon start, decay and end define the exploration properties
+- EPS_DECAY: 0.995
+- EPS_END: 0.01
 
 ## Plot of Rewards
 
