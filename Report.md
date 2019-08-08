@@ -4,6 +4,8 @@ The learning algorithm used to train the agent was Deep Q-Learning.
 
 Deep Q-Learning attempts to find and represent the optimal action-value function as a neural network (Q-Network). 
 
+![DQN Network](photos/DQN_Network.png)
+
 Deep Q-Learning is enhanced by using two main concepts which are experience replay and fixed q-targets.
 
 #### Experience Replay 
