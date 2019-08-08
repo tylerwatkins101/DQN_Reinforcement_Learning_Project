@@ -1,8 +1,10 @@
 ## Learning Algorithm
 
-The learning algorithm used to train the agent was a Deep Q-Learning trained using experience replay and fixed q-targets.
+The learning algorithm used to train the agent was Deep Q-Learning.
 
-Deep Q-Learning attempts to find and represent the optimal action-value function as a neural network (Q-Network). Deep Q-Learning uses 2 separate networks with identical architecture. 
+Deep Q-Learning attempts to find and represent the optimal action-value function as a neural network (Q-Network). 
+
+Deep Q-Learning is enhanced by using two main concepts which are experience replay and fixed q-targets.
 
 #### Experience Replay 
 
