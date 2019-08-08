@@ -1,14 +1,26 @@
 ## Learning Algorithm
 
-The learning algorithm used to train the agent was a Deep Q-Network model trained using experience replay and fixed q-targets.
+The learning algorithm used to train the agent was a Deep Q-Learning trained using experience replay and fixed q-targets.
 
-Fixed Q-Targets: Two networks are used, with the “target” network merely being a copy of the training network. The training network will have its Q-values updated, but will use the Q-value of the target network when estimating future discounted return (i.e., it will use the “old” network to generate estimates). The target network will periodically be updated to match the training network, so that these estimates won’t be far away from the training network. Decoupling the target from the parameters makes the learning algorithm much more stable and less likely to diverge or fall into oscillations.
+Deep Q-Learning attempts to find and represent the optimal action-value function as a neural network (Q-Network). Deep Q-Learning uses 2 separate networks with identical architecture. 
+
+#### Experience Replay 
+
+When the agent interacts with the environment, the sequence of experience tuples can be highly correlated. The naive Q-learning algorithm that learns from each of these experience tuples in sequential order runs the risk of getting swayed by the effects of this correlation. By instead keeping track of a replay buffer and using experience replay to sample from the buffer at random, we can prevent action values from oscillating or diverging catastrophically.
+
+The replay buffer contains a collection of experience tuples (S, A, R, S′). The tuples are gradually added to the buffer as we are interacting with the environment.
+
+The act of sampling a small batch of tuples from the replay buffer in order to learn is known as experience replay. In addition to breaking harmful correlations, experience replay allows us to learn more from individual tuples multiple times, recall rare occurrences, and in general make better use of our experience.
+
+#### Fixed Q-Targets
+
+Two networks are used, with the “target” network merely being a copy of the training network. The training network will have its Q-values updated, but will use the Q-value of the target network when estimating future discounted return (i.e., it will use the “old” network to generate estimates). The target network will periodically be updated to match the training network, so that these estimates won’t be far away from the training network. Decoupling the target from the parameters makes the learning algorithm much more stable and less likely to diverge or fall into oscillations.
 
 The pseudo-code for the DQN algorithm is as follows:
 
-![DQN Algorithm](photos/DQN Algorithm.png)
+![DQN Algorithm](photos/DQN_Algorithm.png)
 
-## The Model Architecture for the Q-Network:
+## The Model Architecture for the Q-Network
 
 - Inputs = State Space Size (37)
 - Hidden Linear Layer 1 (inputs = 37, outputs = 64)
@@ -18,7 +30,7 @@ The pseudo-code for the DQN algorithm is as follows:
 - Hidden Linear Layer 3 (inputs = 64, outputs = 4)
 - Outputs = Action Space Size (4)
 
-## The Hyperparameters:
+## The Hyperparameters
 
 - minibatch size: 64
 - replay memory size: 100000
