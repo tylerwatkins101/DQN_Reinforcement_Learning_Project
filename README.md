@@ -2,7 +2,7 @@
 
 In this project I train a DQN Deep Reinforcement Learning Agent to improve it's performance in a Unity (https://unity.com/) powered environment.
 
-![banana](photos/banana.png)
+![banana](photos/banana.gif)
 
 The environment is a large, square world and the agent is trained to navigate and collect bananas.
 
